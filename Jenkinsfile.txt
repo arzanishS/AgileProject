@@ -1,0 +1,36 @@
+pipeline{
+   agent any
+
+   stages{
+      stage('compile Stage'){
+	steps{
+	sh 'compile clean'
+	}
+     }
+   }
+ 
+   stages{
+      stage('testing Stage'){
+	steps{
+	sh 'test successful'
+	}
+     }
+   }	
+
+   stages{
+      stage('build Stage'){
+	steps{
+	sh 'build successful'
+	}
+     }
+   }	
+
+   stages{
+      stage('deploy'){
+	steps{
+	sh 'deployed successful'
+	}
+     }
+   }
+	
+}
